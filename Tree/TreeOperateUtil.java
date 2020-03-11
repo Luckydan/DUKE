@@ -1,14 +1,10 @@
-package com.letcode.tree;
-
 import java.util.Deque;
 import java.util.LinkedList;
-
-
 
 public class TreeOperateUtil{
 	
 	/* 定义二叉树 */
-	class TreeNode {
+    static class TreeNode {
 		int val;
 		TreeNode left;
 		TreeNode right;
