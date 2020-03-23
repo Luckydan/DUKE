@@ -4,8 +4,9 @@ package com.dan;
  * letCode-124
  * 可以从任意节点开始，每个节点最多经过一次，问经过的节点的和最大是多少。
  * 此处的节点不单指一个完全的二级节点，也可以为多级节点。
+ * @author gl
  */
-public class MaxPathSum {
+public class MaxPathSum{
 
     public static int max = Integer.MIN_VALUE;
 
@@ -15,7 +16,9 @@ public class MaxPathSum {
     }
 
     static int helper(TreeNode root) {
-        if (root == null) return 0;
+        if (root == null) {
+            return 0;
+        }
         int left = Math.max(helper(root.left), 0);
         int right = Math.max(helper(root.right), 0);
         max = Math.max(max, left + right + root.val);
